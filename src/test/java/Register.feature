@@ -1,6 +1,6 @@
 Feature: Register Test
 
-  Scenario Outline: Create An Account
+  Scenario: Create An Account
 
     Given Navigate to Website
     And Click My Account Button
@@ -14,5 +14,3 @@ Feature: Register Test
     And Write "<PasswordConfirm>"
     And Choose Be aware of the opportunities!
     And Choose Privacy Policy
-    Examples:
-      | Name | Surname | Phone Number | Email | Password | PasswordConfirm |
