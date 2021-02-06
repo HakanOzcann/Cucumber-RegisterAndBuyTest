@@ -1,16 +1,29 @@
 package stepDefinition;
 
+import PageObjectModel.registerPage;
 import cucumber.api.java.en.Given;
+import org.openqa.selenium.WebDriver;
+import utilities.Driver;
+import java.util.concurrent.TimeUnit;
 
 public class RegisterSteps {
-    @Given("^Navigate to Website$")
-    public void navigate_to_Website() throws Throwable {
 
+    registerPage registerPage = new registerPage();
+    private WebDriver driver;
+
+    @Given("^Navigate to Website$")
+    public void navigate_to_Website() throws Throwable
+    {
+        driver = Driver.getDriver();
+        driver.manage().window().maximize();
+        driver.get("https://www.mediamarkt.com.tr/");
+        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
     }
 
     @Given("^Click My Account Button$")
-    public void click_My_Account_Button() throws Throwable {
-
+    public void click_My_Account_Button() throws Throwable
+    {
+        registerPage.clickMyAccount();
     }
 
     @Given("^Click Register Button$")
