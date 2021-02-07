@@ -10,6 +10,7 @@ Feature: Login Test
         And Click logIn button
         And Write Login Email "<emailLogin>"
         And Write Login Password "<passwordLogin>"
+        And Click Login Button
 
         Examples:
           | emailLogin | passwordLogin |

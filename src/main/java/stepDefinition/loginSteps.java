@@ -27,4 +27,10 @@ public class loginSteps {
         loginPage.LoginPassword(loginPass);
     }
 
+    @And("^Click Login Button$")
+    public void LoginButton()
+    {
+        loginPage.loginButton();
+    }
+
 }

@@ -36,7 +36,15 @@ public class loginPage extends AbstractClass {
 
         public void LoginPassword(String LoginPassword)
         {
-        sendKeysFunction(loginPassword,LoginPassword);
+            sendKeysFunction(loginPassword,LoginPassword);
+        }
+
+        @FindBy(id = "my-account-action-login")
+        private WebElement loginButton;
+
+        public void loginButton()
+        {
+            clickFunction(loginButton);
         }
 }
 
