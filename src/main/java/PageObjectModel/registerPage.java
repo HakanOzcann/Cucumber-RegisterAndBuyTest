@@ -103,8 +103,6 @@ public class registerPage extends AbstractClass {
         clickFunction(save);
     }
 
-
-
 }
 
 
