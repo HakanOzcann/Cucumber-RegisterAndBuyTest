@@ -28,6 +28,12 @@ public abstract class AbstractClass
         sendKeysElement.sendKeys(value);
     }
 
+    public void selectElementFromDropdown(WebElement dropdown, String element)
+    {
+        Select slc = new Select(dropdown);
+        slc.selectByVisibleText(element);
+    }
+
     public void scrollUpDown() {
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("window.scrollBy(0,500)");

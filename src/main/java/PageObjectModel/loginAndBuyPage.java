@@ -6,11 +6,11 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utilities.Driver;
 
-public class loginPage extends AbstractClass {
+public class loginAndBuyPage extends AbstractClass {
 
         private WebDriver driver;
 
-        public loginPage() {
+        public loginAndBuyPage() {
             driver = Driver.getDriver();
             PageFactory.initElements(driver, this);
         }
@@ -46,5 +46,46 @@ public class loginPage extends AbstractClass {
         {
             clickFunction(loginButton);
         }
+
+        @FindBy(name = "query")
+        private WebElement searchProduct;
+
+        public void Search(String Search)
+        {
+            sendKeysFunction(searchProduct,Search);
+        }
+
+        @FindBy(xpath = "//*[@id=\"search-autocomplete\"]/form/button")
+        private WebElement searchButton;
+
+        public void SearchButton()
+        {
+            clickFunction(searchButton);
+        }
+
+        @FindBy(id = "sort-by-select")
+        private WebElement selectCheap;
+
+        public void selectLowestPrice()
+        {
+            selectElementFromDropdown(selectCheap,"Fiyata Göre (Önce En Düşük)");
+        }
+
+        @FindBy(id = "product-list-add-to-cart-5889405")
+        private WebElement buyProduct;
+
+        public void BuyProduct()
+        {
+            clickFunction(buyProduct);
+        }
+
+        @FindBy(id = "basket-flyout-cart")
+        private WebElement completeOrder;
+
+        public void CompleteOrder()
+        {
+            clickFunction(completeOrder);
+        }
+
 }
 
