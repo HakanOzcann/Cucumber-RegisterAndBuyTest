@@ -87,5 +87,13 @@ public class loginAndBuyPage extends AbstractClass {
             clickFunction(completeOrder);
         }
 
+        @FindBy(xpath = "//*[@id=\"js-cart-app\"]/div[4]/div/div/a/span")
+        private WebElement continueOrder;
+
+        public void ContinueOrder()
+        {
+                clickFunction(continueOrder);
+        }
+
 }
 

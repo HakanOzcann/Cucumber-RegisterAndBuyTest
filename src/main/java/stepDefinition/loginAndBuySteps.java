@@ -63,4 +63,10 @@ public class loginAndBuySteps {
         loginAndBuyPage.CompleteOrder();
     }
 
+    @And("^Click Continue Button$")
+    public void Continue()
+    {
+        loginAndBuyPage.ContinueOrder();
+    }
+
 }
