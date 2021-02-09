@@ -1,9 +1,11 @@
 package stepDefinition;
 
 import PageObjectModel.registerPage;
+import cucumber.api.java.After;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import org.openqa.selenium.WebDriver;
+import org.testng.annotations.AfterTest;
 import utilities.Driver;
 
 import java.util.concurrent.TimeUnit;
@@ -86,6 +88,12 @@ public class RegisterSteps
     public void clickSave()
     {
         registerPage.saveButton();
+    }
+
+    @AfterTest
+    public void quitDriver() throws InterruptedException
+    {
+       Driver.closeDriver();
     }
 
 

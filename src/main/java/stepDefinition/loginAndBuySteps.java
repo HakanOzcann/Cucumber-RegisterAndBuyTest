@@ -1,8 +1,10 @@
 package stepDefinition;
 
 import PageObjectModel.loginAndBuyPage;
+import cucumber.api.java.After;
 import cucumber.api.java.en.And;
 import org.openqa.selenium.WebDriver;
+import utilities.Driver;
 
 public class loginAndBuySteps {
 
@@ -67,6 +69,12 @@ public class loginAndBuySteps {
     public void Continue()
     {
         loginAndBuyPage.ContinueOrder();
+    }
+
+    @After
+    public void quitDriver() throws InterruptedException
+    {
+        Driver.closeDriver();
     }
 
 }

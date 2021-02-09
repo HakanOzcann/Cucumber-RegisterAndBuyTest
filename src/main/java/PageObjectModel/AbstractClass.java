@@ -6,7 +6,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.Assert;
 import utilities.Driver;
 
 public abstract class AbstractClass
@@ -34,7 +33,8 @@ public abstract class AbstractClass
         slc.selectByVisibleText(element);
     }
 
-    public void scrollUpDown() {
+    public void scrollUpDown()
+    {
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("window.scrollBy(0,500)");
     }

@@ -7,18 +7,25 @@ public class Driver {
 
     private static WebDriver driver;
 
-    public static WebDriver getDriver() {
-        if (driver == null) {
+    public static WebDriver getDriver()
+    {
+        if (driver == null)
+        {
             System.setProperty("webdriver.gecko.driver", System.getProperty("user.dir") + "/src/main/resources/geckodriver");
              driver = new ChromeDriver();
         }
-    return driver;
+
+        return driver;
     }
-public static void closeDriver() {
-    if (driver != null) {
-        driver = null;
+
+public static void closeDriver()
+    {
+        if (driver != null)
+        {
+            driver.quit();
+            driver = null;
         }
-}
+    }
 }
 
 
