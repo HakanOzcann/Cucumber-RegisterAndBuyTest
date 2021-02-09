@@ -21,5 +21,5 @@ Feature: Login and Buy Test
         Examples:
           | emailLogin | passwordLogin | searchProduct |
 
-          | ozcanhk05@gmail.com | 147369852h | Headphone |
+          | test123@gmail.com | 123test123 | Headphone |
 
