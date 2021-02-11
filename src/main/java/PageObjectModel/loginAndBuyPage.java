@@ -92,8 +92,34 @@ public class loginAndBuyPage extends AbstractClass {
 
         public void ContinueOrder()
         {
-                clickFunction(continueOrder);
+             clickFunction(continueOrder);
         }
+
+        @FindBy(name = "street")
+        private WebElement homeAddress;
+
+        public void WriteHomeAddress(String WriteHomeAddress)
+        {
+              sendKeysFunction(homeAddress,WriteHomeAddress);
+        }
+
+        @FindBy(id = "name")
+        private WebElement doorNumber;
+
+        public void DoorNumber(String DoorNumber)
+        {
+              sendKeysFunction(doorNumber, DoorNumber);
+        }
+
+        @FindBy(id = "remoteOptions")
+        private WebElement remoteOptions;
+
+        public void RemoteOptions()
+        {
+                selectElementFromDropdown(remoteOptions,"İSTANBUL");
+        }
+
+
 
 }
 

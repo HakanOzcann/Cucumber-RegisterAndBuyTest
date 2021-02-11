@@ -1,6 +1,7 @@
 package stepDefinition;
 
 import PageObjectModel.loginAndBuyPage;
+import cucumber.api.PendingException;
 import cucumber.api.java.After;
 import cucumber.api.java.en.And;
 import org.openqa.selenium.WebDriver;
@@ -71,10 +72,29 @@ public class loginAndBuySteps {
         loginAndBuyPage.ContinueOrder();
     }
 
+    @And("^Write Home Address \"([^\"]*)\">$")
+    public void writeHomeAddress(String writeHomeAddress)
+    {
+        loginAndBuyPage.WriteHomeAddress(writeHomeAddress);
+    }
+
+    @And("^Write Door Number \"([^\"]*)\"$")
+    public void Door(String doorNumber)
+    {
+        loginAndBuyPage.DoorNumber(doorNumber);
+    }
+
+    @And("^Choose City$")
+    public void ChooseCity()
+    {
+        loginAndBuyPage.RemoteOptions();
+    }
+
     @After
     public void quitDriver() throws InterruptedException
     {
         Driver.closeDriver();
     }
+
 
 }

@@ -17,9 +17,14 @@ Feature: Login and Buy Test
         And Click Buy Product Button
         And Click Complete the Order Button
         And Click Continue Button
+        And Write Home Address "<homeAddress">
+        And Write Door Number "<writeHomeNumber>"
+        And Choose City
+        And Choose District
+        And Choose Neighborhood
 
         Examples:
           | emailLogin | passwordLogin | searchProduct |
 
-          | test123@gmail.com | 123test123 | Headphone |
+          | ozcanhk05@gmail.com | 147369852h | Headphone |
 
