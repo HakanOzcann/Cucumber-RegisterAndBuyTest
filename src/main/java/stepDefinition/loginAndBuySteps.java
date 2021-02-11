@@ -72,7 +72,7 @@ public class loginAndBuySteps {
         loginAndBuyPage.ContinueOrder();
     }
 
-    @And("^Write Home Address \"([^\"]*)\">$")
+    @And("^Write Home Address \"([^\"]*)\"$")
     public void writeHomeAddress(String writeHomeAddress)
     {
         loginAndBuyPage.WriteHomeAddress(writeHomeAddress);

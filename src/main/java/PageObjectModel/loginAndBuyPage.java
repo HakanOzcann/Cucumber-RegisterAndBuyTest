@@ -1,5 +1,6 @@
 package PageObjectModel;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -103,7 +104,7 @@ public class loginAndBuyPage extends AbstractClass {
               sendKeysFunction(homeAddress,WriteHomeAddress);
         }
 
-        @FindBy(id = "name")
+        @FindBy(name = "housenumber")
         private WebElement doorNumber;
 
         public void DoorNumber(String DoorNumber)
@@ -111,12 +112,12 @@ public class loginAndBuyPage extends AbstractClass {
               sendKeysFunction(doorNumber, DoorNumber);
         }
 
-        @FindBy(id = "remoteOptions")
+        @FindBy(xpath = "//*[@id=\"personaldata\"]/div[2]/div/div/div/div[2]/form/div[9]/div/div/div/address-remote-options/remote-options/select[1]")
         private WebElement remoteOptions;
 
         public void RemoteOptions()
         {
-                selectElementFromDropdown(remoteOptions,"İSTANBUL");
+                selectElementFromDropdown(remoteOptions,"ANKARA");
         }
 
 
