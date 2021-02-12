@@ -20,8 +20,7 @@ Feature: Login and Buy Test
         And Write Home Address "<homeAddress>"
         And Write Door Number "<writeDoorNumber>"
         And Choose City
-        And Choose District
-        And Choose Neighborhood
+      
         Examples:
           | emailLogin | passwordLogin | searchProduct | homeAddress | writeDoorNumber |
 
